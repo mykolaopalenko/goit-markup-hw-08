@@ -1,0 +1,23 @@
+// base
+@import "./utils/modern-normalize.scss";
+@import "./utils/variables";
+@import "./utils/base";
+@import "./utils/visually-hidden";
+@import './utils/network__block';
+@import './utils/button';
+@import "./utils/modal";
+@import './utils/hov';
+//base end
+
+// Components
+@import "./components/header";
+@import "./components/hero";
+@import "./components/doing";
+@import "./components/info";
+@import "./components/team";
+@import "./components/company";
+@import "./components/footer";
+@import "./components/portfolio-nav";
+@import "./components/portfolio-items";
+// Components end
+

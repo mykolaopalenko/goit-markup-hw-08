@@ -1,0 +1,44 @@
+.company {
+   // .company__list
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // .company__link
+
+   &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 170px;
+      height: 92px;
+      border: 1px solid $iconcolor;
+      border-radius: 4px;
+      color: $iconcolor;
+      transition: border-color $animation;
+
+      &:hover,
+      &:focus {
+         border-color: $maincolor2;
+      }
+   }
+
+   // .company__icon
+
+   &__icon {
+      width: 106px;
+      height: 60px;
+      fill: $iconcolor;
+      transition: fill $animation;
+   }
+}
+
+.company__link:hover .company__icon {
+   fill: $maincolor2;
+}
+.company__link:focus .company__icon {
+   fill: $maincolor2;
+}

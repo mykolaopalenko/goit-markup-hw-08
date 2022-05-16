@@ -1,0 +1,50 @@
+.section--nopaddingtop {
+   padding-top: 0;
+}
+.doing {
+
+   display: flex;
+   justify-content: space-between;
+
+   // .doing__list
+   &__title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.16;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 50px;
+   }
+
+   // .doing__item
+
+   &__item {
+      height: 294px;
+      position: relative;
+   }
+
+   // .doing__box
+
+   &__box {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 370px;
+      height: 70px;
+      background-color: rgba(47, 48, 58, 0.8);
+      bottom: 0;
+   }
+
+   // .doing__text
+
+   &__text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $logotext;
+   }
+}

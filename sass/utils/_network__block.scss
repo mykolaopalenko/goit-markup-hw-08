@@ -1,0 +1,42 @@
+.network {
+   // .footer__net
+
+   &__block {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   // .network__link
+
+   &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      transition: color $animation, background-color $animation;
+
+      &:hover,
+      &:focus {
+         background-color: $maincolor2;
+         color: $logotext;
+      }
+   }
+
+   // .network__icon
+
+   &__icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      fill: $iconcolor;
+      transition: fill $animation, background-color $animation;
+   }
+}
+.network__link:hover .network__icon {
+   fill: $logotext;
+}
+.network__link:focus .network__icon {
+   fill: $logotext;
+}

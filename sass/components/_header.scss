@@ -1,0 +1,124 @@
+.header {
+   border-bottom: 1px solid #ececec;
+}
+
+.header-inner {
+   display: flex;
+   align-items: center;
+}
+.logo {
+   font-family: $ffraleway;
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 1.19;
+   letter-spacing: 0.03em;
+   cursor: pointer;
+   text-decoration: none;
+   color: $logocolor;
+   margin-right: 93px;
+
+   &:focus {
+      color: $maincolor2;
+   }
+
+   // .logo__web
+
+   &__web {
+      color: $maincolor2;
+   }
+}
+.nav {
+   // .nav__list
+
+   &__list {
+      display: flex;
+   }
+
+   // .nav__item
+
+   &__item {
+      &:not(:last-child) {
+         margin-right: 50px;
+      }
+   }
+
+   // .nav__url
+
+   &__link {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      color: $maincolor;
+      display: inline-block;
+      padding: 32px 0;
+      transition: color $animation;
+
+      &:hover,
+      &:focus {
+         color: $maincolor2;
+      }
+      //
+   }
+}
+.nav__link--active {
+   color: $aboutbuttonhover;
+
+   &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $aboutbuttonhover;
+      transition: background-color $animation;
+   }
+}
+.contact {
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   display: flex;
+   margin-left: auto;
+   // .contact__item
+
+   &__item {
+      &:not(:last-child) {
+         margin-right: 50px;
+      }
+   }
+
+   // .contact__info
+
+   &__link {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      color: var(--infocolor);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      padding: 32px 0 32px 0;
+      transition: color $animation;
+
+      &:hover,
+      &:focus {
+         color: $maincolor2;
+      }
+   }
+
+   // .contact__icon
+
+   &__icon {
+      display: block;
+      margin-right: 10px;
+      fill: currentColor;
+   }
+}
