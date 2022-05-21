@@ -30,28 +30,29 @@
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
    .hero {
-      background-image: url("../../images/hero_480px@2x.jpg");
+      background-image: url("./../images/hero_480px@2x.jpg");
    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {   
    .hero {
       background-image: url("./../images/hero_768px.jpg");
    }
    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .hero {
-         background-image: url("../../images/hero_768px@2x.jpg");
+         background-image: url("./../images/hero_768px@2x.jpg");
       }
    }
+
 }
 
 @media (min-width: 1200px) {
    .hero {
-      background-image: url("../../images/hero_1200px.jpg");
+      background-image: url("./../images/hero_1200px.jpg");
    }
    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .hero {
-         background-image: url("../../images/hero_1200px@2x.jpg");
+         background-image: url("./../images/hero_1200px@2x.jpg");
       }
    }
 }
