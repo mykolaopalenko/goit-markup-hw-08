@@ -376,6 +376,7 @@ li {
 }
 
 .backdrop {
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 0;
@@ -393,6 +394,7 @@ li {
 }
 
 .modal {
+  z-index: 210;
   position: absolute;
   top: 50%;
   left: 50%;
