@@ -6,11 +6,15 @@
    // .footer__social
 
    &__social {
-      margin-left: 70px;
+      margin-bottom: 60px;
    }
 
-   // .footer__text
-
+   // .footer__content
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
    &__text {
       font-weight: 700;
       font-size: 14px;
@@ -26,8 +30,7 @@
    }
 }
 .content {
-   display: flex;
-   align-items: baseline;
+   text-align: center;
 }
 
 // logo
@@ -58,15 +61,9 @@
    font-size: 14px;
    line-height: 1.71;
    letter-spacing: 0.03em;
-
-   display: block;
+   margin-bottom: 60px;
+   // display: block;
    width: 231px;
-
-   // &:hover,
-   // &:focus {
-   //    color: $maincolor2;
-   // }
-   // .address__footer
 
    &__footer {
       margin-bottom: 9px;
@@ -95,7 +92,6 @@
 
    &__link {
       background-color: rgba(255, 255, 255, 0.1);
-
    }
    &__icon {
       fill: $logotext;
@@ -104,9 +100,6 @@
 
 .network {
    // .footer__net
-
-   &__block {
-   }
 
    // .network__item
 
@@ -144,12 +137,14 @@
 }
 
 .sent {
-   margin-left: 95px;
+   // margin-left: 95px;
+
    // .sent__footer
 
-   &__footer {
-      display: block;
-   }
+   // &__footer {
+   //    display: flex;
+   //    flex-direction: column;
+   // }
 
    // .sent__text
 
@@ -166,16 +161,16 @@
    }
 
    // .sent__space
-
    &__space {
       display: flex;
+      align-items: center;
+      flex-direction: column;
    }
-
    // .sent__box
 
    &__box {
       display: block;
-      width: 358px;
+      width: 100%;
       border: 1px solid rgba(255, 255, 255, 0.3);
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
       border-radius: 4px;
@@ -184,12 +179,12 @@
       padding: 15px;
       outline: none;
       transition: border $animation;
+      margin-bottom: 20px;
    }
 
    // .sent__btn
 
    &__btn {
-      margin-left: 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -214,4 +209,59 @@
 .sent__box:hover,
 .sent__box:focus {
    border: 2px solid $maincolor2;
+}
+
+@media (min-width: 480px) {
+   .sent__box{
+      width: 450px;
+   }
+}
+@media (min-width: 768px) {
+   .footer__info {
+      display: flex;
+      justify-content: space-around;
+   }
+}
+
+@media (min-width: 1200px) {
+   .content {
+      align-items: baseline;
+   }
+   .address {
+      margin-bottom: 0;
+   }
+
+   .sent__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: auto;
+   }
+   .sent__box {
+      margin-right: 12px;
+     width: 358px;
+   }
+
+
+   .footer__info {
+      display: flex;
+      justify-content: start;
+   }
+   .content {
+      display: flex;
+   }
+   .sent__space {
+      flex-direction: row;
+      align-items: flex-start;
+   }
+   .sent {
+      margin-left: auto;
+   }
+   .footer__social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 12px;
+      margin-left: 70px;
+   }
 }

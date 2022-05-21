@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      team__name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфолио</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,47 +18,77 @@
       <div class="container">
         <div class="header-inner">
           <a class="logo" href="#"><span class="logo__web">Web</span>Studio</a>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="./index.html"
-                  >Студия</a
+
+          <button
+            type="button"
+            class="menu-botton"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              class="menu-icon"
+              width="40px"
+              height="40px"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-close"
+                href="./images/icons.svg#menu_close"
+              ></use>
+              <use class="icon-open" href="./images/icons.svg#menu_open"></use>
+            </svg>
+          </button>
+
+          <div class="menu-container" id="menu-container" data-menu>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="./index.html"
+                    >Студия</a
+                  >
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link  nav__link--active" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="contact">
+              <li class="contact__item">
+                <a class="contact__link" href="mailto:info@devstudio.com">
+                  <svg class="contact__icon" width="16" height="12">
+                    <use href="./images/icons.svg#mail  "></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contact__item">
+                <a class="contact__link" href="tel:+380961111111">
+                  <svg class="contact__icon" width="10" height="16">
+                    <use href="./images/icons.svg#tel"></use>
+                  </svg>
+                  +38 096 111 11 11</a
                 >
               </li>
-              <li class="nav__item">
-                <a class="nav__link  nav__link--active" href="./portfolio.html">Портфолио</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Контакты</a>
-              </li>
             </ul>
-          </nav>
-          <ul class="contact">
-            <li class="contact__item">
-              <a class="contact__link" href="mailto:info@devstudio.com">
-                <svg class="contact__icon" width="16" height="12">
-                  <use href="./images/icons.svg#mail  "></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="contact__item">
-              <a class="contact__link" href="tel:+380961111111">
-                <svg class="contact__icon" width="10" height="16">
-                  <use href="./images/icons.svg#tel"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+            <ul class="menu-social">
+               <li class="menu-link">Instagram</li>
+               <li class="menu-link">Twitter</li>
+               <li class="menu-link">Facebook</li>
+               <li class="menu-link">LinkedIn</li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
-
+  
     <main>
-      <section class="section">
+       <section class="section">
         <div class="container">
-          <h1 class="visually-hidden">Портфолио</h1>
+         <h1 class="visually-hidden">Портфолио</h1>
           <ul class="filters">
             <li class="filters__item">
               <button type="button" class="filters__button">Все</button>
@@ -78,18 +105,22 @@
             <li class="filters__item">
               <button type="button" class="filters__button">Маркетинг</button>
             </li>
-          </ul>
+          </ul> 
 
           <ul class="portfolio">
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img1.jpg"
-                    alt="Технокряк"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img1.jpg 1x,
+                      ./images/img1@2x.jpg 2x"
+                      src="./images/img1.jpg"
+                      alt="Технокряк"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -105,12 +136,16 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img2.jpg"
-                    alt="Дизайн"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img2.jpg 1x,
+                      ./images/img2@2x.jpg 2x"
+                      src="./images/img2.jpg"
+                      alt="Дизайн"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -128,12 +163,16 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img3.jpg"
-                    alt="Ресторан Seafood"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img3.jpg 1x,
+                      ./images/img3@2x.jpg 2x"
+                      src="./images/img3.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -149,12 +188,16 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img4.jpg"
-                    alt="Проект Prime"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img4.jpg 1x,
+                      ./images/img4@2x.jpg 2x"
+                      src="./images/img4.jpg"
+                      alt="Проект Prime"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -170,12 +213,16 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img5.jpg"
-                    alt="Маркетинг"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img5.jpg 1x,
+                      ./images/img5@2x.jpg 2x"
+                      src="./images/img5.jpg"
+                      alt="Маркетинг"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -191,12 +238,16 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img6.jpg"
-                    alt=" Inspiration has no Borders"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img6.jpg 1x,
+                      ./images/img6@2x.jpg 2x"
+                      src="./images/img6.jpg"
+                      alt=" Inspiration has no Borders"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -212,12 +263,16 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img7.jpg"
-                    alt="Издание Limited Edition"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img7.jpg 1x,
+                      ./images/img7@2x.jpg 2x"
+                      src="./images/img7.jpg"
+                      alt="Издание Limited Edition"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -233,12 +288,16 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img8.jpg"
-                    alt="Проект LAB"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img8.jpg 1x,
+                      ./images/img8@2x.jpg 2x"
+                      src="./images/img8.jpg"
+                      alt="Проект LAB"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -254,12 +313,16 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
-                  <img
-                    class="portfolio__img"
-                    width="370"
-                    src="./images/img9.jpg"
-                    alt="Growing Business"
-                  />
+                  <div class="portfolio__img-block">
+                    <img
+                      class="portfolio__img"
+                      srcset="
+                      ./images/img9.jpg 1x,
+                      ./images/img9@2x.jpg 2x"
+                      src="./images/img9.jpg"
+                      alt="Growing Business"
+                    />
+                  </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -275,69 +338,71 @@
           </ul>
         </div>
       </section>
-   -->
-    
     </main>
-    
-<!-- 
-    <footer class="footer">
+
+  
+       <footer class="footer">
       <div class="container content">
-        <div class="footer__content">
-          <a class="logo-footer" href="#"><span class="web">Web</span>Studio</a>
-          <address>
-            <ul class="address">
-              <li class="address__footer">
-                <a
-                  class="address__link"
-                  href="https://goo.gl/maps/WDw2HMy2bMc1PJCF8"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="footer__info">
+          <div class="footer__content">
+            <a class="logo-footer" href="#"
+              ><span class="web">Web</span>Studio</a
+            >
+            <address>
+              <ul class="address">
+                <li class="address__footer">
+                  <a
+                    class="address__link"
+                    href="https://goo.gl/maps/WDw2HMy2bMc1PJCF8"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="address__footer">
+                  <a class="footer-contact" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a class="footer-contact" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__social">
+            <h3 class="footer__text">присоединяйтесь</h3>
+            <ul class="footer__net network">
+              <li class="network__item">
+                <a class="network__link footer-network__link" href="#">
+                  <svg class="network__icon footer-network__icon">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__footer">
-                <a class="footer-contact" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+              <li class="network__item">
+                <a class="network__link footer-network__link" href="#">
+                  <svg class="network__icon footer-network__icon">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li>
-                <a class="footer-contact" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
+              <li class="network__item">
+                <a class="network__link footer-network__link" href="#">
+                  <svg class="network__icon footer-network__icon">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="network__item">
+                <a class="network__link footer-network__link" href="#">
+                  <svg class="network__icon footer-network__icon">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__social">
-          <h3 class="footer__text">присоединяйтесь</h3>
-          <ul class="footer__net network">
-            <li class="network__item">
-              <a class="network__link footer-network__link" href="#">
-                <svg class="network__icon footer-network__icon">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="network__item">
-              <a class="network__link footer-network__link" href="#">
-                <svg class="network__icon footer-network__icon">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="network__item">
-              <a class="network__link footer-network__link" href="#">
-                <svg class="network__icon footer-network__icon">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="network__item">
-              <a class="network__link footer-network__link" href="#">
-                <svg class="network__icon footer-network__icon">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="sent">
           <form class="sent__footer">
@@ -359,6 +424,8 @@
           </form>
         </div>
       </div>
-    </footer> 
-  </body> 
+    </footer>
+
+    <script src="./js/mobile-menu.js"></script>
+  </body>
 </html>
