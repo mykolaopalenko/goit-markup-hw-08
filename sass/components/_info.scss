@@ -5,10 +5,23 @@
 }
 
 .info {
+   @media(max-width:767px){
+        &__item:not(:last-child){
+         margin-bottom: 30px;
+      }
+     }
+     @media(max-width:1199px){
+      &__item:nth-child(-n + 2){
+       margin-bottom: 30px;
+    }
+   }
    &__item {
       max-width: 450px;
       margin-left: auto;
       margin-right: auto;
+
+     
+      
    }
 
   
@@ -31,6 +44,7 @@
       letter-spacing: 0.03em;
       text-transform: uppercase;
       margin-bottom: 10px;
+      text-align: center;
    }
    // .info__text
    &__text {
@@ -59,6 +73,9 @@
 @media (min-width: 768px) {
    .info__item {
       max-width: 354px;
+   }
+   .info__title{
+      text-align: left;
    }
 
    .info__item:nth-child(2n + 1) {

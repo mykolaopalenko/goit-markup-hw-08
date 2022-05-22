@@ -16,7 +16,6 @@
    cursor: pointer;
    text-decoration: none;
    color: $logocolor;
-   margin-right: 93px;
 
    &:focus {
       color: $maincolor2;
@@ -29,10 +28,9 @@
    }
 }
 
-.nav {  
-  
+.nav {
    // .nav__list
-   
+
    &__list {
       padding-bottom: 300px;
    }
@@ -66,11 +64,9 @@
       &:focus {
          color: $maincolor2;
       }
-
-     
    }
 }
-.nav__link--active{
+.nav__link--active {
    color: $aboutbuttonhover;
 }
 
@@ -85,22 +81,36 @@
    margin-right: 0;
 }
 .contact {
+    // .contact__icon
+
+    &__icon {
+      display: block;
+      margin-right: 10px;
+      fill: currentColor;
+   }
+
    @media (max-width: 767px) {
       & {
          margin-bottom: 64px;
+         display: flex;
+         flex-direction: column-reverse;
+      }
+
+      &__icon{
+         display: none;
       }
    }
-&__item{
-   @media (max-width: 767px) {
-      &:first-child .contact__link {
-         margin-bottom: 32px;
-         font-size: 34px;
-         line-height: 1.17;
-         color: $maincolor2;
-         white-space: normal;
+   &__item {
+      @media (max-width: 767px) {
+         &:last-child .contact__link {
+            margin-bottom: 32px;
+            font-size: 34px;
+            line-height: 1.17;
+            color: $maincolor2;
+            white-space: normal;
+         }
       }
    }
-}
    // .contact__link
    &__link {
       font-weight: 500;
@@ -117,37 +127,24 @@
       &:hover {
          color: $maincolor2;
       }
-      
-      @media (max-width: 767px) {
-         // &:hover,
-         // &:focus {
-         //    font-size: 34px;
-         //    line-height: 1.17;
-         // }
-      }
+
+     
    }
 
-   // .contact__icon
-
-   &__icon {
-      display: block;
-      margin-right: 10px;
-      fill: currentColor;
+   @media (max-width: 1199px) {
+      .contact__item:first-child{
+         margin-bottom: 10px;
+      }
    }
 }
 
 @media (min-width: 480px) {
 }
 
-// @media (max-width: 767px) {
-//    .contact{
-//       display: none;
-//    }
-//    nav{
-//       display: none;
-//    }
-// }
 @media (min-width: 768px) {
+   .logo {
+      margin-right: 88px;
+   }
    .nav__list {
       display: flex;
       padding-bottom: 0;
@@ -163,8 +160,6 @@
       margin-right: 50px;
    }
    .nav__link--active {
-    
-    
       &::after {
          content: "";
          display: block;
@@ -187,8 +182,9 @@
       &__link {
          font-size: 14px;
          line-height: 1.14;
-         color: $maincolor;
+   
       }
+   
    }
    .menu-container {
       display: flex;
@@ -197,6 +193,9 @@
 }
 
 @media (min-width: 1200px) {
+   .logo {
+      margin-right: 93px;
+   }
    .contact {
       display: flex;
    }

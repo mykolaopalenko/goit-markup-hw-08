@@ -20,10 +20,14 @@
       &:hover .overlay-text {
          transform: translateY(0);
       }
-   }
-   &__item:not(:last-child) {
+      @media(max-width:1199px){
+        &:not(:last-child) {
       margin-bottom: 30px;
    }
+   }
+   
+   }
+ 
    // .portfolio__link
 
    &__link {

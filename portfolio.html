@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-   <header class="header">
+    <header class="header">
       <div class="container">
         <div class="header-inner">
           <a class="logo" href="#"><span class="logo__web">Web</span>Studio</a>
@@ -44,12 +44,12 @@
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="./index.html"
-                    >Студия</a
-                  >
+                  <a class="nav__link" href="./index.html">Студия</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link  nav__link--active" href="./portfolio.html">Портфолио</a>
+                  <a class="nav__link nav__link--active" href="./portfolio.html"
+                    >Портфолио</a
+                  >
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="#">Контакты</a>
@@ -75,20 +75,20 @@
               </li>
             </ul>
             <ul class="menu-social">
-               <li class="menu-link">Instagram</li>
-               <li class="menu-link">Twitter</li>
-               <li class="menu-link">Facebook</li>
-               <li class="menu-link">LinkedIn</li>
+              <li class="menu-link">Instagram</li>
+              <li class="menu-link">Twitter</li>
+              <li class="menu-link">Facebook</li>
+              <li class="menu-link">LinkedIn</li>
             </ul>
           </div>
         </div>
       </div>
     </header>
-  
+
     <main>
-       <section class="section">
+      <section class="section">
         <div class="container">
-         <h1 class="visually-hidden">Портфолио</h1>
+          <h1 class="visually-hidden">Портфолио</h1>
           <ul class="filters">
             <li class="filters__item">
               <button type="button" class="filters__button">Все</button>
@@ -105,21 +105,37 @@
             <li class="filters__item">
               <button type="button" class="filters__button">Маркетинг</button>
             </li>
-          </ul> 
+          </ul>
 
           <ul class="portfolio">
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img1.jpg 1x,
-                      ./images/img1@2x.jpg 2x"
-                      src="./images/img1.jpg"
-                      alt="Технокряк"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/img1_mobile.jpg    1x,
+                          ./images/img1_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img1_tablet.jpg    1x,
+                          ./images/img1_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img1_desktop.jpg    1x,
+                          ./images/img1_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img src="./images/img1_mobile.jpg"  class="portfolio__img" alt="Технокряк" />
+                    </picture>
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -137,14 +153,30 @@
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img2.jpg 1x,
-                      ./images/img2@2x.jpg 2x"
-                      src="./images/img2.jpg"
-                      alt="Дизайн"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/img2_mobile.jpg    1x,
+                          ./images/img2_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img2_tablet.jpg    1x,
+                          ./images/img2_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img2_desktop.jpg    1x,
+                          ./images/img2_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img src="./images/img2_mobile.jpg" class="portfolio__img" alt="Дизайн" />
+                    </picture>
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -164,14 +196,33 @@
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img3.jpg 1x,
-                      ./images/img3@2x.jpg 2x"
-                      src="./images/img3.jpg"
-                      alt="Ресторан Seafood"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/img3_mobile.jpg    1x,
+                          ./images/img3_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img3_tablet.jpg    1x,
+                          ./images/img3_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img3_desktop.jpg    1x,
+                          ./images/img3_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img class="portfolio__img"
+                        src="./images/img3_mobile.jpg"
+                        alt="Ресторан Seafood"
+                      />
+                    </picture>
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -189,14 +240,30 @@
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img4.jpg 1x,
-                      ./images/img4@2x.jpg 2x"
-                      src="./images/img4.jpg"
-                      alt="Проект Prime"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/img4_mobile.jpg    1x,
+                          ./images/img4_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img4_tablet.jpg    1x,
+                          ./images/img4_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img4_desktop.jpg    1x,
+                          ./images/img4_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img class="portfolio__img" src="./images/img4_mobile.jpg" alt="Проект Prime" />
+                    </picture>
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -214,14 +281,30 @@
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img5.jpg 1x,
-                      ./images/img5@2x.jpg 2x"
-                      src="./images/img5.jpg"
-                      alt="Маркетинг"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/img5_mobile.jpg    1x,
+                          ./images/img5_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img5_tablet.jpg    1x,
+                          ./images/img5_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img5_desktop.jpg    1x,
+                          ./images/img5_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img class="portfolio__img" src="./images/img5_mobile.jpg" alt="Маркетинг" />
+                    </picture>
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -239,14 +322,18 @@
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img6.jpg 1x,
-                      ./images/img6@2x.jpg 2x"
-                      src="./images/img6.jpg"
-                      alt=" Inspiration has no Borders"
-                    />
+                     <picture>
+                        <source srcset="./images/img6_mobile.jpg 1x,
+                        ./images/img6_mobile@2x.jpg 2x" media="(max-width: 767px)">  
+                        <source srcset="./images/img6_tablet.jpg 1x,
+                        ./images/img6_tablet@2x.jpg 2x" media="(max-width: 1199px)">  
+                        <source srcset="./images/img6_desktop.jpg 1x,
+                        ./images/img6_desktop@2x.jpg 2x" media="(min-width: 1200px)">             
+                        <img   class="portfolio__img"                       
+                          src="./images/img6_mobile.jpg"
+                          alt="Inspiration has no Borders"
+                        />
+                      </picture>
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -264,14 +351,19 @@
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img7.jpg 1x,
-                      ./images/img7@2x.jpg 2x"
-                      src="./images/img7.jpg"
-                      alt="Издание Limited Edition"
-                    />
+                     <picture>
+                        <source srcset="./images/img7_mobile.jpg 1x,
+                        ./images/img7_mobile@2x.jpg 2x" media="(max-width: 767px)">  
+                        <source srcset="./images/img7_tablet.jpg 1x,
+                        ./images/img7_tablet@2x.jpg 2x" media="(max-width: 1199px)">  
+                        <source srcset="./images/img7_desktop.jpg 1x,
+                        ./images/img7_desktop@2x.jpg 2x" media="(min-width: 1200px)">             
+                        <img
+                          class="portfolio__img"
+                          src="./images/img7_mobile.jpg"
+                          alt="Издание Limited Edition"
+                        />
+                      </picture>
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -289,14 +381,19 @@
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img8.jpg 1x,
-                      ./images/img8@2x.jpg 2x"
-                      src="./images/img8.jpg"
-                      alt="Проект LAB"
-                    />
+                     <picture>
+                        <source srcset="./images/img8_mobile.jpg 1x,
+                        ./images/img8_mobile@2x.jpg 2x" media="(max-width: 767px)">  
+                        <source srcset="./images/img8_tablet.jpg 1x,
+                        ./images/img8_tablet@2x.jpg 2x" media="(max-width: 1199px)">  
+                        <source srcset="./images/img8_desktop.jpg 1x,
+                        ./images/img8_desktop@2x.jpg 2x" media="(min-width: 1200px)">             
+                        <img
+                          class="portfolio__img"
+                          src="./images/img8_mobile.jpg"
+                          alt="Проект LAB"
+                        />
+                      </picture>                    
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -314,14 +411,19 @@
               <a class="portfolio__link" href="#">
                 <div class="ovarlay">
                   <div class="portfolio__img-block">
-                    <img
-                      class="portfolio__img"
-                      srcset="
-                      ./images/img9.jpg 1x,
-                      ./images/img9@2x.jpg 2x"
-                      src="./images/img9.jpg"
-                      alt="Growing Business"
-                    />
+                     <picture>
+                        <source srcset="./images/img9_mobile.jpg 1x,
+                        ./images/img9_mobile@2x.jpg 2x" media="(max-width: 767px)">  
+                        <source srcset="./images/img9_tablet.jpg 1x,
+                        ./images/img9_tablet@2x.jpg 2x" media="(max-width: 1199px)">  
+                        <source srcset="./images/img9_desktop.jpg 1x,
+                        ./images/img9_desktop@2x.jpg 2x" media="(min-width: 1200px)">             
+                        <img
+                          class="portfolio__img"
+                          src="./images/img9_mobile.jpg"
+                          alt="Growing Business"
+                        />
+                      </picture>                   
                   </div>
                   <div class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -340,8 +442,7 @@
       </section>
     </main>
 
-  
-       <footer class="footer">
+    <footer class="footer">
       <div class="container content">
         <div class="footer__info">
           <div class="footer__content">

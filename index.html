@@ -75,10 +75,10 @@
               </li>
             </ul>
             <ul class="menu-social">
-               <li class="menu-link">Instagram</li>
-               <li class="menu-link">Twitter</li>
-               <li class="menu-link">Facebook</li>
-               <li class="menu-link">LinkedIn</li>
+              <li class="menu-link">Instagram</li>
+              <li class="menu-link">Twitter</li>
+              <li class="menu-link">Facebook</li>
+              <li class="menu-link">LinkedIn</li>
             </ul>
           </div>
         </div>
@@ -198,12 +198,20 @@
           <ul class="team">
             <li class="team__item">
               <div class="team__img-block">
-                <img
-                  class="team__img"
-                  srcset="./images/photo1.jpg 1x, ./images/photo1@2x.jpg 2x"
-                  src="./images/photo1.jpg"
-                  alt="Product Designer"
-                />
+
+               <picture >
+                  <source srcset="./images/photo1_mobile.jpg 1x,
+                  ./images/photo1_mobile@2x.jpg 2x" media="(max-width: 767px)">  
+                  <source srcset="./images/photo1_tablet.jpg 1x,
+                  ./images/photo1_tablet@2x.jpg 2x" media="(max-width: 1199px)">  
+                  <source srcset="./images/photo1_desktop.jpg 1x,
+                  ./images/photo1_desktop@2x.jpg 2x" media="(min-width: 1200px)">             
+                  <img
+                 class="team__img"
+                    src="./images/photo1_mobile.jpg"
+                    alt="Product Designe"
+                  />
+                </picture>
               </div>
               <div class="team__info">
                 <h3 class="team__title">Игорь Демьяненко</h3>
@@ -242,13 +250,19 @@
             </li>
             <li class="team__item">
               <div class="team__img-block">
-                <img
-                  class="team__img"
-                  srcset="./images/photo2.jpg 1x,
-                   ./images/photo2@2x.jpg 2x"
-                  src="./images/photo2.jpg"
-                  alt="Frontend Developer"
-                />
+                <picture >
+                  <source srcset="./images/photo2_mobile.jpg 1x,
+                  ./images/photo2_mobile@2x.jpg 2x" media="(max-width: 767px)">  
+                  <source srcset="./images/photo2_tablet.jpg 1x,
+                  ./images/photo2_tablet@2x.jpg 2x" media="(max-width: 1199px)">  
+                  <source srcset="./images/photo2_desktop.jpg 1x,
+                  ./images/photo2_desktop@2x.jpg 2x" media="(min-width: 1200px)">             
+                  <img
+                   class="team__img"
+                    src="./images/photo2_mobile.jpg"
+                    alt="Frontend Developer"
+                  />
+                </picture>
               </div>
               <div class="team__info">
                 <h3 class="team__title">Ольга Репина</h3>
@@ -287,13 +301,21 @@
             </li>
             <li class="team__item">
               <div class="team__img-block">
-                <img
-                  class="team__img"
-                  srcset="./images/photo3.jpg 1x,
-                   ./images/photo3@2x.jpg 2x"
-                  src="./images/photo3.jpg"
-                  alt="Marketing"
-                />
+
+               <picture >
+                  <source srcset="./images/photo3_mobile.jpg 1x,
+                  ./images/photo3_mobile@2x.jpg 2x" media="(max-width: 767px)">  
+                  <source srcset="./images/photo3_tablet.jpg 1x,
+                  ./images/photo3_tablet@2x.jpg 2x" media="(max-width: 1199px)">  
+                  <source srcset="./images/photo3_desktop.jpg 1x,
+                  ./images/photo3_desktop@2x.jpg 2x" media="(min-width: 1200px)">             
+                  <img
+                   class="team__img"
+                    src="./images/photo3_mobile.jpg"
+                    alt="Marketing"
+                  />
+                </picture>
+               
               </div>
               <div class="team__info">
                 <h3 class="team__title">Николай Тарасов</h3>
@@ -332,13 +354,21 @@
             </li>
             <li class="team__item">
               <div class="team__img-block">
-                <img
-                  class="team__img"
-                  srcset="./images/photo4.jpg 1x,
-                   ./images/photo4@2x.jpg 2x"
-                  src="./images/photo4.jpg"
-                  alt="UI Designer"
-                />
+
+               <picture>
+                  <source srcset="./images/photo4_mobile.jpg 1x,
+                  ./images/photo4_mobile@2x.jpg 2x" media="(max-width: 767px)">  
+                  <source srcset="./images/photo4_tablet.jpg 1x,
+                  ./images/photo4_tablet@2x.jpg 2x" media="(max-width: 1199px)">  
+                  <source srcset="./images/photo4_desktop.jpg 1x,
+                  ./images/photo4_desktop@2x.jpg 2x" media="(min-width: 1200px)">             
+                  <img
+                    class="team__img"
+                    src="./images/photo4_mobile.jpg"
+                    alt="UI Designer"
+                  />
+                </picture>
+
               </div>
               <div class="team__info">
                 <h3 class="team__title">Михаил Ермаков</h3>
@@ -382,45 +412,45 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="ourteam">Постоянные клиенты</h2>
+          <h2 class="section__title">Постоянные клиенты</h2>
           <div class="company">
             <ul class="company__list">
-              <li>
+              <li class="company__item">
                 <a class="company__link" href="#">
                   <svg class="company__icon">
                     <use href="./images/icons.svg#company1"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="company__item">
                 <a class="company__link" href="#">
                   <svg class="company__icon">
                     <use href="./images/icons.svg#company2"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="company__item">
                 <a class="company__link" href="#">
                   <svg class="company__icon">
                     <use href="./images/icons.svg#company3"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="company__item">
                 <a class="company__link" href="#"
                   ><svg class="company__icon">
                     <use href="./images/icons.svg#company4"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li  class="company__item">
                 <a class="company__link" href="#"
                   ><svg class="company__icon">
                     <use href="./images/icons.svg#company5"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="company__item">
                 <a class="company__link" href="#"
                   ><svg class="company__icon">
                     <use href="./images/icons.svg#company6"></use>
