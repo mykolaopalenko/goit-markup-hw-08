@@ -1157,6 +1157,15 @@ input:focus + .form__svg {
   flex-wrap: wrap;
   align-items: center;
 }
+@media (max-width: 369px) {
+  .company__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .company__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 767px) {
   .company__item:nth-child(-n+4) {
     margin-bottom: 30px;
