@@ -942,7 +942,7 @@ input:focus + .form__svg {
   color: #ffffff;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .section--nopaddingtop {
     display: none;
   }
